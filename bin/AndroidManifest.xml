@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bilgi.hergunyenibirbilgi"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="11" />
+   <uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+ <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="Her Gün 1 Bilgi"
+        android:theme="@style/yeniTema" >
+        <activity
+            android:name="com.bilgi.hergunyenibirbilgi.MainActivity"
+            android:label="Her Gün 1 Bilgi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.bilgi.hergunyenibirbilgi.Icerik"
+            android:label=""
+            android:icon="@drawable/icon"
+            android:theme="@style/AppBaseTheme" >
+        </activity>
+        
+        
+        <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
+          android:taskAffinity="com.bilgi.hergunyenibirbilgi.AppWall"
+          android:theme="@android:style/Theme" />
+
+<activity android:name="com.startapp.android.publish.AppWallActivity"
+          android:theme="@android:style/Theme.Translucent"
+          android:taskAffinity="com.bilgi.hergunyenibirbilgi.AppWall"            
+          android:configChanges="orientation|keyboardHidden" />
+        
+    </application>
+
+</manifest>
